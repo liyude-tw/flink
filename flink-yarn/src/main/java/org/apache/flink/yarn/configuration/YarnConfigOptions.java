@@ -106,7 +106,10 @@ public class YarnConfigOptions {
                                                     "yarn.resourcemanager.am.max-attempts"))
                                     .build());
 
-    /** The config parameter defining the global attemptFailuresValidityInterval of YARN applications. */
+    /**
+     * The config parameter defining the global attemptFailuresValidityInterval of YARN
+     * applications.
+     */
     public static final ConfigOption<Long> APPLICATION_ATTEMPT_FAILURES_GLOBAL_VALIDITY_INTERVAL =
             key("yarn.application-attempt-failures-global-validity-interval")
                     .longType()

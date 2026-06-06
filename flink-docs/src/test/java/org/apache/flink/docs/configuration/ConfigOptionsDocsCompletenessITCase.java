@@ -198,7 +198,7 @@ class ConfigOptionsDocsCompletenessITCase {
                                         String.format(
                                                 "Documentation of %s in %s is outdated. Expected: default=(%s) description=(%s).",
                                                 supposedState.key,
-                                                supposedState.containingClass.getSimpleName(),
+                                                supposedState.containingClass.getName(),
                                                 supposedState.defaultValue,
                                                 supposedState.description));
                             }
@@ -213,7 +213,7 @@ class ConfigOptionsDocsCompletenessITCase {
                         documentedOption ->
                                 problems.add(
                                         "Documented option "
-                                                + documentedOption.key
+                                                + documentedOption.containingFile.toString()
                                                 + " does not exist."));
 
         if (!problems.isEmpty()) {
